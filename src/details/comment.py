@@ -1,4 +1,4 @@
-#   Praw
+#	Praw
 #	Copyright (c) 2016, Bryce Boe
 #	All rights reserved.
 
