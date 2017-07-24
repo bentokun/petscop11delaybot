@@ -20,4 +20,6 @@
   - Binary Python Memcached
   - Memcached Cloud (as database)
   
+ ##### PETSCOP 11 WILL NEVER BE RELEASED
+  
   
