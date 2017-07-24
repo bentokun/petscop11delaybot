@@ -42,7 +42,6 @@
 #	You should have received a copy of the GNU General Public License
 #	along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 
-
 import praw
 import re
 import bmemcached
@@ -52,7 +51,7 @@ def update_date(database, subreddit, date):
 			if re.search("Petscop 11", comment.body, re.IGNORECASE):
 				if not database.get(comment.id) and not database.get(comment.author.name):
 					d2 = add_and_get_time(date)
-					dt_str = numToMonth(d.month) + " " + str(d.year)
+					dt_str = numToMonth(d2.month) + " " + str(d2.year)
 					database.set(dt_key, dt_str)
 					
 					reply_mess=("You have mentioned Petscop Eleven (number form). Now Petscop Eleven is estimated for release in {0} {1}! \n\n ^I'm ^a ^bot ^lol. ^This ^bot ^only ^works ^on ^Petscop ^Reddit ^and ^will ^be ^shut ^down ^on ^26/7/2017 ^or ^sooner. ^If ^you ^feel ^that ^I'm ^annoying ^in ^three ^days, ^you ^can ^block ^me ^by ^inbox ^or ^comment: ^!BLOCK. ^If ^you ^want ^to ^unblock ^me, ^send: ^!UNBLOCK. ^Seriously, ^I'm ^a ^copy ^of ^/u/SeriouslyWhenIsHL3.").format(numToMonth(d2.month), d2.year)
@@ -64,8 +63,8 @@ def update_date(database, subreddit, date):
 					except:
 						print("Error happened with comment id: ", comment.id)
 						
-						d2=sub_and_get_time(d)
-						dt_str = numToMonth(d.month) + " " + str(d.year)
+						d2=sub_and_get_time(date)
+						dt_str = numToMonth(d2.month) + " " + str(d2.year)
 						mc.set(dt_key, dt_str)
 						pass
 					
@@ -73,5 +72,6 @@ def update_date(database, subreddit, date):
 				else:
 					print("Comment= ", comment.body, " ; CommentID= ", comment.id, "replied")
 			
-		
+	return date
+	
 	pass
