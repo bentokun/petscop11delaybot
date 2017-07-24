@@ -43,7 +43,7 @@
 #	along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 
 
-from __future__ 					 import print_function, unicode_literals
+from __future__ import print_function, unicode_literals
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 import praw
