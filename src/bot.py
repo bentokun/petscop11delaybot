@@ -79,7 +79,7 @@ def timed_job():
 	global subreddit
 	
 	update_block_list(reddit)
-	update_date(mc, subreddit, d)
+	d = update_date(mc, subreddit, d)
 	
 	print("Routine finished.")
 	
