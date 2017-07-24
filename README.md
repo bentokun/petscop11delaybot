@@ -11,7 +11,7 @@
   - The bot is written in Python using PRAW, follows the same mechanic as /u/SeriouslyWhenisHL3, and is being hosted on Heroku.
   
 ## Can i modify and make my own
-  - Anyway you want, but it would be nice if you mentioned me in the credit.
+  - Anyway you want, but it would be nice if you mentioned me in the credit. The license is mostly just stand there.
   
 ## Depencies
   - Python (3.6.1)
