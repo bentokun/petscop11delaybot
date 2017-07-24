@@ -1,5 +1,7 @@
 # Petscop 11 Delay Bot
 
+![alt text](https://raw.githubusercontent.com/bentokun/petscop11delaybot/master/preview_pic.png)
+
 ## What is it?
   - Petscop 11 Delay bot is a bot under the name of Palaskowitz, that works only in the Petscop Reddit.
   - The bot will be shutted down on 26/7/2017
