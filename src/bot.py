@@ -42,7 +42,6 @@
 #	You should have received a copy of the GNU General Public License
 #	along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 
-
 from __future__ import print_function, unicode_literals
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -52,8 +51,8 @@ import re
 import bmemcached
 import logging
 
-from utils import *
 from details import *
+from utils import *
 
 logging.basicConfig()
 sched = BlockingScheduler()
@@ -72,11 +71,12 @@ subreddit = reddit.subreddit("petscop")
 
 d = get_date_from_db(mc)
 
-@sched.scheduled_job('interval', minutes=5)
+@sched.scheduled_job('interval', minutes=3)
 def timed_job():
 	global mc
 	global reddit
 	global subreddit
+	global d
 	
 	update_block_list(reddit)
 	d = update_date(mc, subreddit, d)
