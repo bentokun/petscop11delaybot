@@ -65,6 +65,10 @@ def add_and_get_time(d):
 	d = monthdelta(d, 1)
 	return d
 	
+def add_year_and_get_time(d):
+	d = monthdelta(d, 12)
+	return d
+	
 def sub_and_get_time(d):
 	d = monthdelta(d, -1)
 	return d
